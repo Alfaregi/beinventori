@@ -13,7 +13,7 @@ if ($conn->connect_error) {
 }
 
 // Fetch product data
-$sql = "SELECT name, stock, CONCAT('http://beinventori/uploads/', image) as image FROM products";
+$sql = "SELECT id, name, stock, price, CONCAT('http://localhost/beinventori/uploads/', image) as image FROM products";  
 $result = $conn->query($sql);
 
 $products = array();
